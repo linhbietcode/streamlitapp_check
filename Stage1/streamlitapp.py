@@ -24,7 +24,7 @@ def load_user():
         st.error(f"loi khi doc file user: {e}")
         return []
 def login_page():
-    st.title("Dang nhap")
+    st.title("Dang nhappp")
 
     username = st.text_input("nhap ten nguoi dung:")
 
