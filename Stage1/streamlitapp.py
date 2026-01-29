@@ -25,12 +25,11 @@ def load_user():
         st.error(f"loi khi doc file user: {e}")
         return []
 def login_page():
-    st.title("Dang nhappp")
-    st.write(os.getcwd())
-    st.write(os.listdir())
-    username = st.text_input("nhap ten nguoi dung:")
+    st.title("Muốn tính giai thừa à, thế có trong team của t k ?")
 
-    if st.button("Dang nhap"):
+    username = st.text_input("Cho cin cái tên đê:")
+
+    if st.button("Vô"):
         if username:
             user = load_user()
             if username in user:
@@ -44,29 +43,29 @@ def login_page():
         else:
             st.warning("co dinh nhap ten nguoi dung khom?")
 def factorial_calculator():
-    st.title("chao mung vuot duoc ai user")
+    st.title("chào mừng vượt được ải tên đăng nhập")
 
-    st.write(f"xin chao, {st.session_state.username}")
+    st.write(f"tốt lắm con vk, {st.session_state.username}")
 
-    if st.button("dang xuat"):
+    if st.button("Cút"):
         st.session_state.login = False
         st.session_state.username = ""
         st.rerun()
     # co divi nma k bt de lam gi
     st.divider()
 
-    number = st.number_input("hi")
+    number = st.number_input("chao cau")
 
     if st.button("tinh giai thua"):
         res = giaithua(number)
         st.write(f"giai thua cua {number} la {res}")
 
 def greating_page():
-    st.title("ni hao")
-    st.write(f"ni hao ma {st.session_state.username}")
-    st.write("rat tiec rat tiec")
+    st.title("Ni hao")
+    st.write(f"Ni hao ma {st.session_state.username}")
+    st.write("Rất tiếc rất lấy làm tiếc")
 
-    if st.button("Quay la dang nhap di onichan"):
+    if st.button("Quay lai dang nhap di onichan ><"):
         st.session_state.greeting = False
         st.session_state.unsername = ""
         st.rerun()
