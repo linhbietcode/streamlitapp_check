@@ -15,7 +15,7 @@ def load_user():
     path = r"user.txt"
     try:
         if os.path.exists(path):
-            with open(path,"r",encoding = "utf-8") as f:
+            with open(path,"r",encoding = "utf-8") 
                 user = [line.strip() for line in f.readlines() if line.strip()]
                 return user
         else:
@@ -25,7 +25,8 @@ def load_user():
         return []
 def login_page():
     st.title("Dang nhappp")
-
+    st.write(os.getcwd())
+    st.write(os.listdir())
     username = st.text_input("nhap ten nguoi dung:")
 
     if st.button("Dang nhap"):
