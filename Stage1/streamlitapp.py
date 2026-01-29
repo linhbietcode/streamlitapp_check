@@ -45,7 +45,7 @@ def login_page():
 def factorial_calculator():
     st.title("chào mừng vượt được ải tên đăng nhập")
 
-    st.write(f"tốt lắm con vk, {st.session_state.username}")
+    st.write(f"tốt lắm con vk {st.session_state.username}")
 
     if st.button("Cút"):
         st.session_state.login = False
@@ -58,7 +58,7 @@ def factorial_calculator():
 
     if st.button("tinh giai thua"):
         res = giaithua(number)
-        st.write(f"giai thua cua {number} la {res}")
+        st.write(f"Trả bài nhé: {res}")
 
 def greating_page():
     st.title("Ni hao")
