@@ -15,7 +15,7 @@ def load_user():
     path = r"user.txt"
     try:
         if os.path.exists(path):
-            with open(path,"r",encoding = "utf-8"):
+            with open(path,"r",encoding = "utf-8") as f:
                 user = [line.strip() for line in f.readlines() if line.strip()]
                 return user
         else:
