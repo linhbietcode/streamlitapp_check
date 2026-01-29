@@ -12,7 +12,7 @@ def giaithua(x):
     return ans
 
 def load_user():
-    path = r"\Stage1\user.txt"
+    path = r"user.txt"
     try:
         if os.path.exists(path):
             with open(path,"r",encoding = "utf-8") as f:
