@@ -12,10 +12,11 @@ def giaithua(x):
     return ans
 
 def load_user():
-    path = r"user.txt"
+    BASE_DIR = os.path.dirname(__file__)
+    user_path = os.path.join(BASE_DIR, "user.txt")
     try:
-        if os.path.exists(path):
-            with open(path,"r",encoding = "utf-8") as f:
+        if os.path.exists(user_path):
+            with open(user_path,"r",encoding = "utf-8") as f:
                 user = [line.strip() for line in f.readlines() if line.strip()]
                 return user
         else:
